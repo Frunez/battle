@@ -19,3 +19,11 @@ feature 'attack players' do
     expect(page).to have_content("Zeeshan attacked Frankie")
   end
 end
+
+feature 'reduce Hitpoints' do
+  scenario "attack reduces player two's hit points" do
+    sign_in_and_play
+    click_link("attack")
+    expect(page).to have_content("Frankie has 90hp")
+  end
+end
