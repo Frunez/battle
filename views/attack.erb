@@ -1,6 +1,6 @@
 <div>
-  <%= @game.player_1.name %> attacked <%= @game.player_2.name %>
-  <%= @game.player_2.name %> has <%= @game.player_2.hitpoints %>hp.
-  It's <%= @game.player_2.name %>'s turn to attack
+  <%= @game.opponent_of(@game.current_turn).name %> attacked <%= @game.current_turn.name %><br>
+  <%= @game.current_turn.name %> has <%= @game.current_turn.hitpoints %>hp.<br>
+  It's <%= @game.current_turn.name %>'s turn to attack<br>
   <a href="/attack">attack</a>
 </div>
